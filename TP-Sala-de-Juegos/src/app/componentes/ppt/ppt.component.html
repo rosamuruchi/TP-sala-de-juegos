@@ -1,0 +1,39 @@
+<div class="container">
+    <div *ngIf="!terminoJuego" id='instrucciones'>
+        <h1>Elegi una:</h1>
+      </div>
+      <img src="assets/imagenes/pptFoto.jpg" class="ppt">
+      <div id='botones-seleccion'>
+        <button type="button" class='btn-papel btn btn-outline-primary btn-lg' (click)="ElegirOpcion('papel')">Papel</button>
+        <button type="button"  class='btn-piedra btn btn-outline-primary btn-lg' (click)="ElegirOpcion('piedra')" >Piedra </button>
+
+        <button type="button"  class='btn-tijera btn btn-outline-primary btn-lg' (click)="ElegirOpcion('tijera')">Tijera</button>
+      </div>
+      <div id='resultado'>
+        
+        <button type="button" class="btn btn-primary btn-lg btn-block" (click)="CompararResultado()">Jugar</button>
+        <h1>Resultado: {{resultado}}</h1>
+      </div>
+      <div id='ring'>
+        <button type="button" [ngClass]='claseBtnUsuario' class="btn btn-success" id='btn-usuario'>{{opcionUsuario}}</button>
+        <button type="button" [ngClass]='claseBtnMaquina' class="btn btn-danger" id='btn-maquina'>{{opcionMaquina}}</button>
+    </div>
+
+    <!-- ALERT -->
+
+    <div *ngIf="mostrarAlert" class="container">
+      <div class="row">
+
+          <div class="col-12">
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  {{mensajeAlert}}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="noMostrarAlert()">
+                                  <span aria-hidden="true">&times;</span>
+                          </button>
+              </div>
+          </div>
+      </div>
+  </div>
+    
+</div>
+ 

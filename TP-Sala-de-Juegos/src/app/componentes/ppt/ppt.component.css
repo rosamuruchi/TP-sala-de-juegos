@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Galada&display=swap');
+
+.container{
+    background-color: rgb(255, 248, 253);
+}
+
+img{
+    display:block;
+    margin:auto;
+    
+    }
+h1{
+    font-family: 'Galada', cursive;
+}
+
+#ring {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+  }
+  
+  #ring button {
+    width: 40vw;
+    height: 20vh;
+    background-size: 40vw 20vh;
+    border-radius: 20px;
+  }
+  
+  
+  #resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vh 0 2vh 0;
+  }
+  
+  #resultado button {
+    margin-bottom: 2vh;
+  }
+  
+  
+  #instrucciones h1{
+    text-align: center;
+  }
+  
+   /*Imagenes clases */
+  .btn-piedra {
+    background-image: url('../../../assets/imagenes/piedra.jpg');
+  }
+  
+  .btn-papel {
+    background-image: url('assets/imagenes/papel.jpg');
+  
+  }
+  
+  .btn-tijera {
+    background-image: url('assets/imagenes/tijera.jpg');
+  }
+  
+  
+  
+  @media only screen and (min-width: 768px) {
+  
+  
+  
+    #botones-seleccion {
+      display: block;
+      margin: auto;   
+      width: 20vw;
+  
+    }
+  
+  }

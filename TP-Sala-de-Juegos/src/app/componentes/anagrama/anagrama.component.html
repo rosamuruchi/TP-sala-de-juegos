@@ -1,0 +1,52 @@
+<div class="container-fluid" style="background-color:lightsalmon;">
+  <br>
+  <h1>Anagrama: adivine el nombre</h1>
+  <div class="row">
+      <div class="col-md-8">
+          <h3 style="color: blue">El anagrama es : "{{palabra}}"</h3><br>
+          <div class="game-area">
+              <div class="input-group mb-3">
+
+                  <input type="text" [(ngModel)]="dato" class="form-control" placeholder="Ingrese el nombre que puede formarse..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" (click)="validarPalabra()" type="button">Comprobar</button>
+                  </div>
+              </div>
+              <div *ngIf="mostrarAlert" class="container">
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="alert alert-success alert-dismissible fade show" role="alert">
+                              {{mensajeAlert}}
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="noMostrarAlert()">
+                                                      <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+
+          <h2>Puntaje:</h2>
+          <table class="table  table-striped table-dark">
+              <tbody>
+                  <tr>
+                      <td>{{nombre}} (gana):</td>
+                      <td>{{ contadorGana }}</td>
+                  </tr>
+
+                  <tr>
+                      <td>Intentos Fallidos:</td>
+                      <td>{{ intentos }}</td>
+                  </tr>
+              </tbody>
+          </table>
+
+          <!-- ALERT -->
+
+
+      </div>
+  </div>
+</div>
+<div style="background-color:lightsalmon;"><br><br><br></div>

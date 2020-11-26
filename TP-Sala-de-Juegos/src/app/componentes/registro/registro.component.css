@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+.jumbotron{
+    background-color: rgb(202, 227, 250);
+}
+
+h2{
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+}
+
+p{
+    font-family: 'EB Garamond', serif;
+    font-size: 100%;
+}
+
+h3{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 300%;
+    width: 400px; margin: 0 auto;
+    text-align: center;
+    color: blue;
+
+}
+label{
+    font-family: 'EB Garamond', serif;
+    font-size: 100%;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1.5px solid rgb(85, 233, 147);
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    
+    color: white;
+    padding: 14px 45px;
+    margin: 15px 0;
+    border: none;
+    /*cursor: pointer;*/
+    
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.signupbtn {
+    float:left;
+    width:50%;
+    color: #fdfdff;
+    background-color: blue;
+    padding: 14px 20px;
+    margin: 15px 0;
+    border: none;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+    
+}
+
+.container-menu{
+    padding: 10px;
+    z-index: 1; 
+}
+
+/* The Modal (background) */
+.modal {
+    /*display: none; /* Hidden by default */
+    /*position: fixed; /* Stay in place */
+    /*z-index: 1; /* Sit on top */
+    /*left: 0;
+    /*top: 0;
+    /*width: 50%; /* Full ANCHO */
+    /*height: 150%; /* Full ALTURA */
+    /*width: 500px; margin: 5 auto;
+    /*overflow: auto; /* Enable scroll if needed */
+    /*background-color: rgb(0,0,0); /* Fallback color */
+    /*background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    margin: 5px 0;
+    width: 44%;
+    height: 110%;
+    left: 50%;
+    top: 40%; /*centrar*/
+    margin-left: -300px;
+    margin-top: -300px;
+    
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 6.5% auto 20% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid rgb(52, 126, 223);
+    width: 98%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}

@@ -1,0 +1,63 @@
+<body>
+  <div class="jumbotron jumbotron-fluid" >
+    <h2 id="terminos">Terminos y condiciones</h2>
+    <hr class="my-4">
+    <div class="container">
+      <p>El Gobierno de la República Argentina (en adelante el “Gobierno Nacional”) no es responsable por los daños y perjuicios que puedan surgir, incluyendo, sin límite, daños, pérdidas o gastos directos, indirectos, que surjan en relación con el uso de los Activos Digitales o la imposibilidad de uso, en relación con cualquier falla en el vencimiento, error, omisión, interrupción, defecto, demora en la operación o transmisión, virus de computadora o falla del sistema de línea, aún en el caso de que el Gobierno Nacional o sus representantes fueran informados sobre la posibilidad de dichos daños, pérdidas o gastos.</p>
+      <p>El Gobierno Nacional no controla ni garantiza la ausencia de virus ni de otros elementos en los contenidos que puedan producir alteraciones en su sistema informático (software y hardware) o en los documentos electrónicos y ficheros almacenados en su sistema informático.</p>
+      <p>El Gobierno Nacional no puede garantizar que la transmisión de información por parte de los Usuarios sea completamente segura. El Usuario asume este riesgo.</p>
+    </div>
+  </div>
+
+  <div style="width: 500px; margin: 0 auto;">
+    <strong><p>Mas informacion: https://www.argentina.gob.ar/terminos-y-condiciones </p></strong>
+  </div>
+  
+  <div class="container" style="width: 400px; margin: 0 auto;">
+    <button class="btn btn-primary btn-lg" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Acepto</button>
+    <button  class="btn btn-danger btn-lg"  routerLink="/Principal" style="width:auto;">No acepto</button>
+  </div>
+  
+  <div id="id01" class="modal" tabindex="-1" role="dialog" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Registrar</h3>
+      </div>
+      <div class="modal-body">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal" data-dismiss="modal">×</span>
+      <form class="modal-content animate" >
+        <div class="container-menu">
+          <label><b>Email</b></label>
+          <input type="text" placeholder="Ingresae su correo" [(ngModel)]="user.email">
+    
+          <label><b>Clave</b></label>
+          <input type="password" placeholder="Ingrese su clave" [(ngModel)]="user.password">
+
+          <input type="checkbox" checked="checked">Recordar mis datos
+          <p>Acepto los<a  onclick="document.getElementById('id01').style.display='none'"  >Terminos y condiciones</a>.</p>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" onclick="document.getElementById('id01').style.display='none'" >Cerrar</button>
+            <button type="button" class="btn btn-primary" (click)="onRegister()">Registrarme</button>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+  
+  </body>

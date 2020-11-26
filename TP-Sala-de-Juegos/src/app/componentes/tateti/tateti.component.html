@@ -1,0 +1,49 @@
+<div class="container-fluid imagen2" style="background-color: lightpink;">
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="game-area">
+                <mat-grid-list class="tick-tack-grid" cols="3">
+                    <mat-grid-tile *ngFor="let block of gs.blocks; let i = index;" (click)="playerClick(i)"><i [class]="block.symbol == 'done' ? 'material-icons tick' : 'material-icons cross'">{{ block.symbol }}</i></mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <br><br><br><br><br>
+            <h2>Puntaje:</h2>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td>{{nombre}}:</td>
+                        <td>{{ gs.players[0].score }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Computadora:</td>
+                        <td>{{ gs.players[1].score }}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Empate:</td>
+                        <td>{{ gs.draw }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div *ngIf="mostrarAlert" class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <!-- <strong>Holy guacamole!</strong> You should check in on some of those fields below. -->
+                            <strong>INFO: </strong> {{mensajeAlert}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="noMostrarAlert()">
+                                            <span aria-hidden="true">&times;</span>
+                                    </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

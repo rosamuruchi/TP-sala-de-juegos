@@ -1,0 +1,24 @@
+#container {
+    text-align: center;
+}
+
+.game-area {
+    margin-top: 25px;
+    width: 450px;
+}
+
+.imagen {
+    position: relative;
+    top: -15px;
+    /* ajustar los valores para mover la imagen */
+    left: -5px;
+    width: 150px;
+    height: 150px;
+    margin: 0%;
+}
+
+.imagen2 {
+    background: url(../../../assets/imagenes/grid.png) no-repeat;
+    background-position: 4% 75%;
+    background-size: 450px;
+}
